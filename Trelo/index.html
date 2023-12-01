@@ -21,7 +21,14 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <!--===============================================================================================-->
 	<script>
-		var points = 0;
+		var baseHp = 100;
+		var attackDamage = 10;
+		var baseStamina = 10;
+		var xpAmountToLevelUp = 100;
+		var level = 1;
+		var xp = 0;
+		var stamina = 10;
+		var hp = 100;
 		function allowDrop(ev) {
 			ev.preventDefault();
 		}
@@ -36,25 +43,56 @@
 			var element = document.getElementById(data);
 			var parent = element.parentElement.id;
 			// console.log(parent + " " + ev.target.id);
-			if(ev.target.id === parent)
+			if(ev.target.id === parent || ev.target.id === element.id)
 				return;
 			
 			ev.target.appendChild(element);
 			
-			if(ev.target.id === "lista1")
+			if(parent === "lista1")
 			{
-				points -= 10;
+				xp += 5;
 			}
-			else if(ev.target.id === "lista2")
+			else if(parent === "lista4")
 			{
-				points += 10;
-			}
-			else if(ev.target.id === "lista3")
-			{
-				points += 20;
+				xp -= 20;
 			}
 			
-			console.log(points);
+			if(ev.target.id === "lista1")
+			{
+				xp -= 5;
+			}
+			else if(ev.target.id === "lista4")
+			{
+				xp += 20;
+			}
+			
+			if(xp >= xpAmountToLevelUp)
+			{
+				LevelUp();
+			}
+			
+			console.log(xp);
+		}
+		
+		function LevelUp()
+		{
+			baseHp += 10;
+			attackDamage += 2;
+			xp -= xpAmountToLevelUp;
+			xpAmountToLevelUp += 30;
+			hp = baseHp;
+			if(!(level % 2))
+				baseStamina++; 
+			stamina = baseStamina;
+			level++;
+			// Update Level, Hp, Stamina and Attack Damage text
+			document.getElementById("level").innerHTML = "Level: " + level;
+			document.getElementById("hp").innerHTML = "HP: " + hp;
+			document.getElementById("baseHp").innerHTML = baseHp;
+			document.getElementById("stamina").innerHTML = "Stamina: " + stamina;
+			document.getElementById("baseStamina").innerHTML = baseStamina;
+			document.getElementById("attackDamage").innerHTML = "Attack Damage: " + attackDamage;
+			console.log("Level Up! Level: " + level + " HP: " + hp + " Stamina: " + baseStamina + " Attack Damage: " + attackDamage);
 		}
 	</script>
 </head>	
@@ -77,7 +115,27 @@
 			<div class="wrap-stats100">
 				<div class="stats-menu" data-tilt>
 					<img src="images/img.png" alt="IMG">
+					<ul>
+						<li>
+							<a id="level">Level: 1</a>
+						</li>
+						<li >
+							<a id="hp">Hp: 100</a>
+							<a>/</a>
+							<a id="baseHp">100</a>
+						</li>
+						<li >
+							<a id="attackDamage">Attack Damage: 10</a>
+						</li>
+						<li>
+							<a id="stamina">Stamina: 10</a>
+							<a>/</a>
+							<a id="baseStamina">10</a>
+						</li>
+					</ul>
+					
 				</div>
+
 				
 				<form class="login100-form validate-form">
 					<span class="login100-form-title">
@@ -123,6 +181,13 @@
 					<div class="trelo1-grid" >
 						<ul class="list-items" ondrop="drop(event)" ondragover="allowDrop(event)" id="lista1">
 							<li draggable="true" ondragstart="drag(event)" id="drag1">Complete mock-up for client website</li>
+							<li draggable="true" ondragstart="drag(event)" id="drag5">Complete mock-up for client website</li>
+							<li draggable="true" ondragstart="drag(event)" id="drag6">Complete mock-up for client website</li>
+							<li draggable="true" ondragstart="drag(event)" id="drag7">Complete mock-up for client website</li>
+							<li draggable="true" ondragstart="drag(event)" id="drag8">Complete mock-up for client website</li>
+							<li draggable="true" ondragstart="drag(event)" id="drag4">Complete XP logic</li>
+							<li draggable="true" ondragstart="drag(event)" id="drag9">Complete XP2 logic</li>
+							<li draggable="true" ondragstart="drag(event)" id="drag10">Complete XP3 logic</li>
 						</ul>
 					</div>
 				</div>
@@ -155,6 +220,10 @@
 					<div class="wrap-input100 validate-input">
 						<input class="input100" type="text" name="pass" placeholder="Nova Tarefa">
 						<span class="focus-input100"></span>
+					</div>
+					<div class="trelo4-grid" >
+						<ul class="list-items" ondrop="drop(event)" ondragover="allowDrop(event)" id="lista4">
+						</ul>
 					</div>
 				</div>
 			</div>
