@@ -119,6 +119,7 @@ input:focus {
 .input-header {
   font-size: 1.1rem;
   margin-bottom: 0.3rem;
+  font-family: Poppins-Regular;
 }
 
 .container-login-btn {
@@ -148,11 +149,7 @@ input:focus {
   justify-content: center;
 }
 
-.cadastro-btn {
-  font-family: Poppins-Regular;
-  font-size: 13px;
-  color: #666666;
-}
+
 
 /* Responsividade */
 
