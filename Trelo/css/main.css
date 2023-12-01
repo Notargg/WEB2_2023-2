@@ -174,15 +174,15 @@ iframe {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: top;
+  align-items: start;
   padding: 5px 15px;
   
 }
-
+/*Container that has half a white background and half purple*/
 .wrap-stats100 {
   width: 100%;
   height: 100%;
-  background: #fff;
+  background: #ffffff;
   border-radius: 10px;
   overflow: hidden;
 
@@ -192,9 +192,24 @@ iframe {
   display: -ms-flexbox;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: start;
   /* padding: 177px 130px 33px 95px; */
 }
+
+/*A stats menu that'll be 50% of wrap-stats100, aligning everything in middle*/
+.stats-menu{
+  width: 50%;
+  height: 100%;
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  align-content: center;
+}
+
+.stats-menu img {
+}
+
 
 .container-quickMenu {
   width: 100%;  
@@ -205,9 +220,10 @@ iframe {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: top;
+  align-items: start;
   padding: 5px 15px;
 }
+
 
 .wrap-quickMenu {
   width: 25rem;
@@ -236,7 +252,7 @@ iframe {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: top;
+  align-items: start;
   padding: 5px 5px;
 }
 
@@ -265,6 +281,31 @@ iframe {
   padding: 5px 10px;
 }
 
+.list-items {
+  flex: 1;
+  /*display: flex;*/
+  height: 100%;
+  background: #0c5460;
+  flex-direction: column;
+  align-content: start;
+  /*padding: 0 0.6rem 0.5rem;*/
+  overflow-y: auto;
+}
+
+.list-items li {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.3;
+  background-color: #c5c5c5;
+  padding: 0.65rem 0.6rem;
+  color: #4d4d4d;
+  border-bottom: 0.1rem solid #ccc;
+  border-radius: 0.3rem;
+  margin-bottom: 0.6rem;
+  word-wrap: break-word;
+  cursor: pointer;
+}
+
 .trelo1{
   background:#fff;
   margin-right: 10px;
@@ -274,7 +315,6 @@ iframe {
 .trelo2{
   background:#fff;
   margin-right: 10px;
-
 }
 
 .trelo3{
@@ -286,23 +326,38 @@ iframe {
 .trelo4{
   background:#fff;
   margin-right: 10px;
+}
 
+.trelo1-grid{
+  height: 100%;
+}
+
+.trelo2-grid{
+  height: 100%;
+}
+
+.trelo3-grid{
+  height: 100%;
+}
+
+.trelo4-grid{
+  height: 100%;
 }
 /*------------------------------------------------------------------
 [  ]*/
 .login100-pic {
-  width: 316px;
-}
-
-.login100-pic img {
+  /*width: 316px;*/
   max-width: 100%;
 }
+
+
 
 
 /*------------------------------------------------------------------
 [  ]*/
 .login100-form {
-  width: 290px;
+  width: 50%;
+  background-color: #8636ff;
 }
 
 .login100-form-title {
@@ -333,7 +388,7 @@ iframe {
   color: #666666;
 
   display: block;
-  width: 80%;
+  width: 100%;
   background: #e6e6e6;
   height: 40px;
   border-radius: 15px;
@@ -462,7 +517,7 @@ iframe {
   }
 
   .login100-pic {
-    width: 35%;
+    width: 50%;
   }
 
   .login100-form {
@@ -476,11 +531,12 @@ iframe {
   }
 
   .login100-pic {
+    width: 50%;
     display: none;
   }
 
   .login100-form {
-    width: 100%;
+    width: 50%;
   }
 }
 

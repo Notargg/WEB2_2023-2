@@ -20,7 +20,44 @@
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <!--===============================================================================================-->
-</head>
+	<script>
+		var points = 0;
+		function allowDrop(ev) {
+			ev.preventDefault();
+		}
+
+		function drag(ev) {
+			ev.dataTransfer.setData("text", ev.target.id);
+		}
+
+		function drop(ev) {
+			ev.preventDefault();
+			var data = ev.dataTransfer.getData("text");
+			var element = document.getElementById(data);
+			var parent = element.parentElement.id;
+			// console.log(parent + " " + ev.target.id);
+			if(ev.target.id === parent)
+				return;
+			
+			ev.target.appendChild(element);
+			
+			if(ev.target.id === "lista1")
+			{
+				points -= 10;
+			}
+			else if(ev.target.id === "lista2")
+			{
+				points += 10;
+			}
+			else if(ev.target.id === "lista3")
+			{
+				points += 20;
+			}
+			
+			console.log(points);
+		}
+	</script>
+</head>	
 <body>
 	
 	<div class="limiter">
@@ -29,13 +66,16 @@
 
 			</div>
 		</div>
-		<div class="container-stats100">
+		<div class="container-stats100"> 
 			
 			<div class="wrap-stats100">
-				<div class="login100-pic js-tilt" data-tilt>
+<!--				<div class="login100-pic js-tilt" data-tilt>-->
+<!--					<img src="images/img-01.png" alt="IMG">-->
+<!--				</div>-->
+				<div class="stats-menu" data-tilt>
 					<img src="images/img-01.png" alt="IMG">
 				</div>
-
+				
 				<form class="login100-form validate-form">
 					<span class="login100-form-title">
 						Main  Menu
@@ -72,11 +112,15 @@
 				<div class="trelo1">
 					<h2>Teste</h2>
 					<div class="wrap-input100 validate-input">
-						<input class="input100" type="text" name="pass" placeholder="Nova Tarefa">
+						<label>
+							<input class="input100" type="text" name="pass" placeholder="Nova Tarefa">
+						</label>
 						<span class="focus-input100"></span>
 					</div>
-					<div class="trelo1-grid">
-						
+					<div class="trelo1-grid" >
+						<ul class="list-items" ondrop="drop(event)" ondragover="allowDrop(event)" id="lista1">
+							<li draggable="true" ondragstart="drag(event)" id="drag1">Complete mock-up for client website</li>
+						</ul>
 					</div>
 				</div>
 				<div class="trelo2">
@@ -85,12 +129,22 @@
 						<input class="input100" type="text" name="pass" placeholder="Nova Tarefa">
 						<span class="focus-input100"></span>
 					</div>
+					<div class="trelo2-grid" >
+						<ul class="list-items" ondrop="drop(event)" ondragover="allowDrop(event)" id="lista2">
+							<li draggable="true" ondragstart="drag(event)" id="drag2">Complete Drag and Drop System</li>
+						</ul>
+					</div>
 				</div>
 				<div class="trelo3">
 					<h2>Teste</h2>
 					<div class="wrap-input100 validate-input">
 						<input class="input100" type="text" name="pass" placeholder="Nova Tarefa">
 						<span class="focus-input100"></span>
+					</div>
+					<div class="trelo3-grid" >
+						<ul class="list-items" ondrop="drop(event)" ondragover="allowDrop(event)" id="lista3">
+							<li draggable="true" ondragstart="drag(event)" id="drag3">Complete Drag and Drop System</li>
+						</ul>
 					</div>
 				</div>
 				<div class="trelo4">
