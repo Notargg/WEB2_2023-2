@@ -208,8 +208,8 @@ iframe {
   align-content: center;
 }
 
-.stats-menu a{
-  
+.stats-menu li{
+  padding-left: 1rem;
 }
 
 .stats-menu img {
@@ -299,9 +299,9 @@ iframe {
 
 .list-items {
   flex: 1;
-  /*display: flex;*/
+  display: flex;
   height: 100%;
-  background: #0c5460;
+  background: rgba(12, 84, 96, 0);
   flex-direction: column;
   align-content: start;
   /*padding: 0 0.6rem 0.5rem;*/
@@ -320,7 +320,36 @@ iframe {
   margin-bottom: 0.6rem;
   word-wrap: break-word;
   cursor: pointer;
+  text-align: center;
 }
+
+.list-items li:last-of-type {
+  margin-bottom: 0;
+}
+
+.list-items li:hover {
+  background-color: #eee;
+}
+
+/* Track */
+.list-items::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle on hover */
+.list-items::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.list-items::-webkit-scrollbar {
+  width: 1.6rem;
+}
+
+.list-items::-webkit-scrollbar-thumb {
+  background: #2aa9f5;
+  border-right: 0.6rem solid #e2e4e6;
+}
+
 
 .trelo1{
   background:#fff;
@@ -359,6 +388,9 @@ iframe {
 .trelo4-grid{
   height: 100%;
 }
+
+
+
 /*------------------------------------------------------------------
 [  ]*/
 .login100-pic {
@@ -385,6 +417,7 @@ iframe {
 .login100-form {
   width: 50%;
   background-color: #8636ff;
+  padding: 0px 10px 0px 10px;
 }
 
 .login100-form-title {
@@ -396,7 +429,7 @@ iframe {
 
   width: 100%;
   display: block;
-  padding-bottom: 54px;
+  /*padding-bottom: 54px;*/
 }
 
 
