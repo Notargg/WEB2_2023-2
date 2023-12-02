@@ -208,8 +208,8 @@ iframe {
   align-content: center;
 }
 
-.stats-menu a{
-  
+.stats-menu li{
+  padding-left: 1rem;
 }
 
 .stats-menu img {
@@ -299,7 +299,7 @@ iframe {
 
 .list-items {
   flex: 1;
-  /*display: flex;*/
+  display: flex;
   height: 100%;
   background: #0c5460;
   flex-direction: column;
@@ -321,6 +321,34 @@ iframe {
   word-wrap: break-word;
   cursor: pointer;
 }
+
+.list-items li:last-of-type {
+  margin-bottom: 0;
+}
+
+.list-items li:hover {
+  background-color: #eee;
+}
+
+/* Track */
+.list-items::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle on hover */
+.list-items::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.list-items::-webkit-scrollbar {
+  width: 1.6rem;
+}
+
+.list-items::-webkit-scrollbar-thumb {
+  background: #2aa9f5;
+  border-right: 0.6rem solid #e2e4e6;
+}
+
 
 .trelo1{
   background:#fff;
@@ -359,6 +387,9 @@ iframe {
 .trelo4-grid{
   height: 100%;
 }
+
+
+
 /*------------------------------------------------------------------
 [  ]*/
 .login100-pic {

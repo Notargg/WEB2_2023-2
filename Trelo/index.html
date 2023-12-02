@@ -42,11 +42,14 @@
 			var data = ev.dataTransfer.getData("text");
 			var element = document.getElementById(data);
 			var parent = element.parentElement.id;
-			// console.log(parent + " " + ev.target.id);
-			if(ev.target.id === parent || ev.target.id === element.id)
+			console.log(parent + " " + ev.target.id);
+			var target = ev.target;
+			if(target.id.includes("drag"))
+				target = target.parentElement;
+			if(target.id === parent || target.id === element.id)
 				return;
-			
-			ev.target.appendChild(element);
+
+			target.appendChild(element);
 			
 			if(parent === "lista1")
 			{
@@ -57,21 +60,29 @@
 				xp -= 20;
 			}
 			
-			if(ev.target.id === "lista1")
+			if(target.id === "lista1")
 			{
 				xp -= 5;
 			}
-			else if(ev.target.id === "lista4")
+			else if(target.id === "lista4")
 			{
 				xp += 20;
 			}
+			
+			if(xp < 0)
+			{
+				LevelDown();
+				return;
+			}
+				
 			
 			if(xp >= xpAmountToLevelUp)
 			{
 				LevelUp();
 			}
+			else
+				UpdateXP();
 			
-			console.log(xp);
 		}
 		
 		function LevelUp()
@@ -85,15 +96,43 @@
 				baseStamina++; 
 			stamina = baseStamina;
 			level++;
+			UpdateStats();
+		}
+		
+		function LevelDown()
+		{
+			baseHp -= 10;
+			attackDamage -= 2;
+			xpAmountToLevelUp -= 30;
+			xp = xpAmountToLevelUp + xp;
+			hp = baseHp;
+			if(!(level % 2))
+				baseStamina--; 
+			stamina = baseStamina;
+			level--;
+			UpdateStats();
+		}
+		
+		function UpdateXP()
+		{
+			document.getElementById("xp").innerHTML = "Experience: " + xp;
+			document.getElementById("xpAmountToLevelUp").innerHTML = xpAmountToLevelUp;
+		}
+		function UpdateStats()
+		{
 			// Update Level, Hp, Stamina and Attack Damage text
+			document.getElementById("xp").innerHTML = "Experience: " + xp;
+			document.getElementById("xpAmountToLevelUp").innerHTML = xpAmountToLevelUp;
 			document.getElementById("level").innerHTML = "Level: " + level;
 			document.getElementById("hp").innerHTML = "HP: " + hp;
 			document.getElementById("baseHp").innerHTML = baseHp;
 			document.getElementById("stamina").innerHTML = "Stamina: " + stamina;
 			document.getElementById("baseStamina").innerHTML = baseStamina;
 			document.getElementById("attackDamage").innerHTML = "Attack Damage: " + attackDamage;
-			console.log("Level Up! Level: " + level + " HP: " + hp + " Stamina: " + baseStamina + " Attack Damage: " + attackDamage);
 		}
+		
+		
+		
 	</script>
 </head>	
 <body>
@@ -119,6 +158,11 @@
 						<li>
 							<a id="level">Level: 1</a>
 						</li>
+						<li>
+							<a id="xp">Experience: 0</a>
+							<a>/</a>
+							<a id="xpAmountToLevelUp">100</a>
+						</li>
 						<li >
 							<a id="hp">Hp: 100</a>
 							<a>/</a>
@@ -139,7 +183,7 @@
 				
 				<form class="login100-form validate-form">
 					<span class="login100-form-title">
-						Main  Menu
+						Missions
 					</span>
 
 					
