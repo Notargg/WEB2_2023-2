@@ -38,10 +38,10 @@ button:hover {
 
 .limiter {
   width: 100%;
-  height: 100%;
+  height: 45.7rem;
+  /*height: 100%;*/
   /*margin: 0 auto;*/
-  margin: auto;
-  background-size: 100% 100%;
+  /*margin: auto;*/
   background: #9053c7;
   background: -webkit-linear-gradient(-135deg, #c850c0, #4158d0);
   background: -o-linear-gradient(-135deg, #c850c0, #4158d0);
@@ -89,7 +89,7 @@ button:hover {
   color: #111;
 }
 
-.container-login {
+.container-battle {
   width: 100%;  
   height: 100%;
   /*min-height: 100vh;*/
@@ -97,7 +97,7 @@ button:hover {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding-bottom: 45px;
+  /*padding-bottom: 45px;*/
   background: #9053c7;
   background: -webkit-linear-gradient(-135deg, #c850c0, #4158d0);
   background: -o-linear-gradient(-135deg, #c850c0, #4158d0);
@@ -105,8 +105,11 @@ button:hover {
   background: linear-gradient(-135deg, #c850c0, #4158d0);
 }
 /*Warp-login has a background that always covers all wrap-login*/
-.wrap-login {
-  width: 960px;
+.battle-field {
+  /*width: 960px;*/
+  /*height: 540px;*/
+  width: 90%;
+  height: 80%;
   background: #f4f0f5;
   border-radius: 7px;
   overflow: hidden;
@@ -114,13 +117,70 @@ button:hover {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  /*background-attachment: fixed;*/
-  background-size: 100% 100%;
-  
+  color: #be0000;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 177px 130px 33px 95px;
+  align-items: start;
+  /*padding: 30px 80px 0px 80px;*/
+}
+
+/*Align everything in middle, make images size constant*/
+.battle-field__player {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+} 
+
+/*Align div with the bottom of the screen*/
+.battle-field__player__image{
+  width: 100%;
+  height: 70%;
+  flex-wrap: wrap;
+  display: flex;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.battle-field__player__image img{
+  width: 80%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/*Align everything in middle, make images size constant*/
+.battle-field__enemy {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+}
+
+/*Align div with the bottom of the screen*/
+.battle-field__enemy__image{
+  width: 100%;
+  height: 70%;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.battle-field__enemy__image img{
+  width: 80%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .login-logo {
