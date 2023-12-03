@@ -366,7 +366,7 @@ iframe {
 
 .list-items::-webkit-scrollbar-thumb {
   background: #2aa9f5;
-  border-right: 0.6rem solid #e2e4e6;
+  /*border-right: 0.6rem solid #e2e4e6;*/
 }
 
 

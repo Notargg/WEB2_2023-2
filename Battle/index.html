@@ -75,7 +75,7 @@
 			// Get the current weather details
 			var weather = data.list[0].weather[0].main;
 			// currentWeatherImage.src = "images/Clouds.jpg";
-			console.log(weather);
+			console.log(data.list);
 			if(weather === "Clear")
 				currentWeatherImage.style.backgroundImage = "url('images/Clear.jpg')";
 			else if(weather === "Snow")
