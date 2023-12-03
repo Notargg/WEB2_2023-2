@@ -61,6 +61,8 @@ a:hover {
   color: #f1f1f1;
 }
 
+trel
+
 /*---------------------------------------------*/
 h1,h2,h3,h4,h5,h6 {
 	margin: 0px;
@@ -214,6 +216,7 @@ iframe {
 
 .stats-menu img{
   border: #111 solid 2px;
+
 }
 
 .stats-menu li{
@@ -223,6 +226,7 @@ iframe {
 .stats-Window{
   height: 100%;
   width: 100%;
+
 }
 
 .container-quickMenu {
@@ -616,6 +620,19 @@ iframe {
   padding: 0 30px 0 30px;
 }
 
+.input100r {
+  font-family: Poppins-Medium;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #666666;
+
+  display: block;
+  width: 100%;
+  background: #e6e6e6;
+  height: 40px;
+  border-radius: 15px;
+  padding: 0 30px 0 30px;
+}
 
 /*------------------------------------------------------------------
 [ Focus ]*/
@@ -632,7 +649,25 @@ iframe {
   color: rgba(89, 0, 255, 0.8);
 }
 
-.input100:focus + .focus-input100 {
+.focus-input100r {
+  display: block;
+  position: absolute;
+  border-radius: 15px;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0px 0px 0px 0px;
+  color: rgba(254, 253, 255, 0.8);
+}
+
+.input100:focus + .focus-input100  {
+  -webkit-animation: anim-shadow 0.5s ease-in-out forwards;
+  animation: anim-shadow 0.5s ease-in-out forwards;
+}
+
+.input100r:focus + .focus-input100r  {
   -webkit-animation: anim-shadow 0.5s ease-in-out forwards;
   animation: anim-shadow 0.5s ease-in-out forwards;
 }
