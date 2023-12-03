@@ -58,7 +58,7 @@ a:focus {
 
 a:hover {
 	text-decoration: none;
-  color: #57b846;
+  color: #f1f1f1;
 }
 
 /*---------------------------------------------*/
@@ -180,6 +180,7 @@ iframe {
 }
 /*Container that has half a white background and half purple*/
 .wrap-stats100 {
+  border: #111 solid 2px;
   width: 100%;
   height: 100%;
   max-height: 100%;
@@ -199,22 +200,26 @@ iframe {
 
 /*A stats menu that'll be 50% of wrap-stats100, aligning everything in middle*/
 .stats-menu{
+  border: #111 solid 2px;
   width: 50%;
   height: 100%;
   background: #ffffff;
-  border-radius: 10px;
   overflow: hidden;
   display: flex;
   align-content: center;
   justify-content: center;
+  padding: 10px 10px;
+  
+}
+
+.stats-menu img{
+  border: #111 solid 2px;
 }
 
 .stats-menu li{
   padding-left: 1rem;
 }
 
-.stats-menu img {
-}
 
 
 .container-quickMenu {
@@ -232,6 +237,7 @@ iframe {
 
 
 .wrap-quickMenu {
+  border: #111 solid 2px;
   width: 25rem;
   height: 3rem;
   background: rgba(204, 195, 214, 0.333);
@@ -251,6 +257,7 @@ iframe {
 }
 
 .wrap-quickMenu ul li{
+  
   list-style: none;
   display: inline-block;
   margin: 0 10px;
@@ -365,23 +372,27 @@ iframe {
 
 .trelo1{
   background:#fff;
+  border: #111 solid 2px;
   margin-right: 10px;
 
 }
 
 .trelo2{
-  background:#fff;
+  background-color: #8636ff;
+  border: #111 solid 2px;
   margin-right: 10px;
 }
 
 .trelo3{
   background:#fff;
+  border: #111 solid 2px;
   margin-right: 10px;
 
 }
 
 .trelo4{
-  background:#fff;
+  background-color: #8636ff;
+  border: #111 solid 2px;
   margin-right: 10px;
 }
 
@@ -403,7 +414,8 @@ iframe {
 
 
 /*------------------------------------------------------------------
-[Peronsagem ]*/
+[Personagem ]*/
+
 
 .name-persono{
   font-family: Poppins-Bold;
@@ -415,6 +427,7 @@ iframe {
   display: block;
   /*padding-bottom: 54px;*/
   padding-left: 15px;
+  padding-top: 5px;
 
 }
 
@@ -546,22 +559,12 @@ iframe {
 }
 
 
-.stats-menu{
-  width: 50%;
-  height: 100%;
-  background: #ffffff;
-  border-radius: 10px;
-  border-color: #111;
-  border: #111;
-  overflow: hidden;
-  display: flex;
-  align-content: center;
-  padding: 10px 10px;
-}
+
 
 /*------------------------------------------------------------------
 [  ]*/
 .login100-form {
+  border: #111 solid 2px;
   width: 50%;
   background-color: #8636ff;
   padding: 0px 10px 0px 10px;
