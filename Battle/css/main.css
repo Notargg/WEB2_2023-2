@@ -512,6 +512,10 @@ iframe {
   height: 100%;
 }
 
+.stats-Window{
+  overflow: auto;
+}
+
 /*Align div with the bottom of the screen*/
 .battle-field__player__image{
   width: 100%;
