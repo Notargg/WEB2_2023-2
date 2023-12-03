@@ -87,6 +87,19 @@
     width: 40%;
   }
   
+
+  .cadastro-text{
+    font-family: Poppins-Bold;
+    font-size: 1.0rem;
+    color: #333333;
+    line-height: 1.1;
+    text-align: center;
+  
+    width: 100%;
+    display: block;
+    padding-bottom: 1rem;
+  }
+
   .cadastro-form-header {
     font-family: Poppins-Bold;
     font-size: 1.8rem;

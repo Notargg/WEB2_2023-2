@@ -206,6 +206,7 @@ iframe {
   overflow: hidden;
   display: flex;
   align-content: center;
+  justify-content: center;
 }
 
 .stats-menu li{
@@ -256,7 +257,17 @@ iframe {
   color: #111;
 }
 
+.title-trelo{
+  font-family: Poppins-Bold;
+  font-size: 1.2rem;
+  color: #333333;
+  line-height: 1.2;
+  text-align: center;
 
+  width: 100%;
+  display: block;
+  /*padding-bottom: 54px;*/
+}
 
 .container-trelo {
   width: 100%;  
@@ -292,6 +303,7 @@ iframe {
 .wrap-treloGrid > div
 {
   border-radius: 10px;
+   overflow: hidden;
   align-items: center;
   text-align: left;
   padding: 5px 10px;
@@ -390,6 +402,141 @@ iframe {
 }
 
 
+/*------------------------------------------------------------------
+[Peronsagem ]*/
+
+.name-persono{
+  font-family: Poppins-Bold;
+  font-size: 1.2rem;
+  color: #5900ffcc;
+  line-height: 1.2;
+
+  width: 100%;
+  display: block;
+  /*padding-bottom: 54px;*/
+  padding-left: 15px;
+
+}
+
+.person{
+  width: 90%;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  align-items: center;
+  text-align: left;
+  padding-left: 15px;
+
+
+}
+
+.lv{
+  display: inline;
+  padding-left: 30px;
+}
+
+/*------------------------------------------------------------------
+[ ProgressBar XP]*/
+
+.xp{
+  color: #5900ffcc;
+
+  width: 100%;
+  display: inline;
+  /*padding-bottom: 54px;*/
+
+
+}
+
+.container-xp{
+  height: 25px;
+  background-color: #999999;
+  position: relative;
+  border-radius: 7px  ;
+
+
+}
+
+.container-xp .progress-xp {
+  position:absolute;
+  height: 100%;
+  border-radius: 7px;
+  background-color: #9000ffcc;
+  animation: progress-animation-xp 2s ease-out forwards;
+
+}
+
+@keyframes progress-animation-xp {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 2%;
+  }
+}
+
+/*------------------------------------------------------------------
+[ Vida ]*/
+
+
+.container-hp{
+  height: 25px;
+  background-color: #999999;
+  position: relative;
+  border-radius: 7px  ;
+
+
+}
+
+.container-hp .progress-hp {
+  position:absolute;
+  height: 100%;
+  border-radius: 7px;
+  background-color: #9000ffcc;
+  animation: progress-animation-hp 2s ease-out forwards;
+
+}
+
+@keyframes progress-animation-hp {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+
+/*------------------------------------------------------------------
+[ Stamina ]*/
+
+
+.container-st{
+  height: 25px;
+  background-color: #999999;
+  position: relative;
+  border-radius: 7px  ;
+
+
+}
+
+.container-st .progress-st {
+  position:absolute;
+  height: 100%;
+  border-radius: 7px;
+  background-color: #9000ffcc;
+  animation: progress-animation-st 2s ease-out forwards;
+
+}
+
+@keyframes progress-animation-st {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
 
 /*------------------------------------------------------------------
 [  ]*/
@@ -465,10 +612,10 @@ iframe {
   bottom: 0;
   left: 0;
   z-index: -1;
-  width: 80%;
+  width: 100%;
   height: 100%;
   box-shadow: 0px 0px 0px 0px;
-  color: rgba(255, 0, 0, 0.8);
+  color: rgba(89, 0, 255, 0.8);
 }
 
 .input100:focus + .focus-input100 {

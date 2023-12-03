@@ -142,9 +142,9 @@
 			<div class="wrap-quickMenu">
 				<ul>
 					<li><a href="/Trelo/index.html">Home</a></li>
-					<li><a href="/Batalha/index.html">Batalha</a></li>
-					<li><a href="">Estatísticas</a></li>
-					<li><a href="*">Sair</a></li>
+					<li><a href="/Battle/index.html">Batalha</a></li>
+					<li><a href="/Customizar/index.html">Customizar</a></li>
+					<li><a href="/Login/index.html">Sair</a></li>
 				</ul>
 
 			</div>
@@ -153,28 +153,41 @@
 			
 			<div class="wrap-stats100">
 				<div class="stats-menu" data-tilt>
-					<img src="images/img.png" alt="IMG">
+					<img src="images/512per.png" alt="IMG">
 					<ul>
+						<div>
+							<a class="name-persono">Janela de Atributos: </a>
+							<a id="name" class="person">Nome: Notarg</a>
+							<a id="level" class="lv">Level: 1</a>
+							<li >
+								<a id="attackDamage">Attack Damage: 10</a>
+							</li>
+						</div>
+					
 						<li>
-							<a id="level">Level: 1</a>
-						</li>
-						<li>
-							<a id="xp">Experience: 0</a>
-							<a>/</a>
-							<a id="xpAmountToLevelUp">100</a>
+							<a id="xp" class="xp">Experience: 0</a>
+							<a class="xp">/</a>
+							<a id="xpAmountToLevelUp" class="xp">100</a>
+							<div class="container-xp">
+								<div class="progress-xp" ></div>
+							</div>
 						</li>
 						<li >
 							<a id="hp">Hp: 100</a>
 							<a>/</a>
 							<a id="baseHp">100</a>
+							<div class="container-hp">
+								<div class="progress-hp" ></div>
+							</div>
 						</li>
-						<li >
-							<a id="attackDamage">Attack Damage: 10</a>
-						</li>
+				
 						<li>
 							<a id="stamina">Stamina: 10</a>
 							<a>/</a>
 							<a id="baseStamina">10</a>
+							<div class="container-st">
+								<div class="progress-st" ></div>
+							</div>
 						</li>
 					</ul>
 					
@@ -198,12 +211,12 @@
 		<div class="container-trelo">
 			<div class="wrap-treloGrid">
 				<div class="trelo1">
-					<h2>Distrações</h2>
+					<h2 class="title-trelo">Distrações</h2>
 					<div class="wrap-input100 validate-input">
-						<label>
+
 							<input class="input100" type="text" name="pass" placeholder="Nova Tarefa">
-						</label>
-						<span class="focus-input100"></span>
+							<span class="focus-input100"></span>
+
 					</div>
 					<div class="trelo1-grid" >
 						<ul class="list-items" ondrop="drop(event)" ondragover="allowDrop(event)" id="lista1">
@@ -213,7 +226,7 @@
 					</div>
 				</div>
 				<div class="trelo2">
-					<h2>Para fazer</h2>
+					<h2 class="title-trelo">Para fazer</h2>
 					<div class="wrap-input100 validate-input">
 						<input class="input100" type="text" name="pass" placeholder="Nova Tarefa">
 						<span class="focus-input100"></span>
@@ -233,7 +246,7 @@
 					</div>
 				</div>
 				<div class="trelo3">
-					<h2>Fazendo</h2>
+					<h2 class="title-trelo">Fazendo</h2>
 					<div class="wrap-input100 validate-input">
 						<input class="input100" type="text" name="pass" placeholder="Nova Tarefa">
 						<span class="focus-input100"></span>
@@ -245,7 +258,7 @@
 					</div>
 				</div>
 				<div class="trelo4">
-					<h2>Concluídas</h2>
+					<h2 class="title-trelo">Concluídas</h2>
 					<div class="wrap-input100 validate-input">
 						<input class="input100" type="text" name="pass" placeholder="Nova Tarefa">
 						<span class="focus-input100"></span>
