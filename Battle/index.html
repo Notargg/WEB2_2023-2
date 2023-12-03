@@ -103,32 +103,32 @@
 					<ul class="stats-Window">
 						<div>
 							<a class="name-persono">Janela de Atributos: </a>
-							<a id="name" class="person">Nome: Portix</a>
-							<a id="level" class="lv">Level: 1</a>
-							<a id="attackDamage" class="attackDamage">Attack Damage: 12</a>
+							<a id="nameEnemy" class="person">Nome: Portix</a>
+							<a id="levelEnemy" class="lv">Level: 1</a>
+							<a id="attackDamageEnemy" class="attackDamage">Attack Damage: 12</a>
 						</div>
 					
 						<li>
-							<a id="xp" class="xp">Experience: 12</a>
+							<a id="xpEnemy" class="xp">Experience: 12</a>
 							<a class="xp">/</a>
-							<a id="xpAmountToLevelUp" class="xp">100</a>
+							<a id="xpAmountToLevelUpEnemy" class="xp">100</a>
 							<div class="container-xp-enemy">
 								<div class="progress-xp-enemy" ></div>
 							</div>
 						</li>
 						<li >
-							<a id="hp">Hp: 90</a>
+							<a id="Enemy">Hp: 90</a>
 							<a>/</a>
-							<a id="baseHp">100</a>
+							<a id="baseHpEnemy">100</a>
 							<div class="container-hp-enemy">
 								<div class="progress-hp-enemy" ></div>
 							</div>
 						</li>
 				
 						<li>
-							<a id="stamina">Stamina: 6</a>
+							<a id="staminaEnemy">Stamina: 6</a>
 							<a>/</a>
-							<a id="baseStamina">10</a>
+							<a id="baseStaminaEnemy">10</a>
 							<div class="container-st-enemy">
 								<div class="progress-st-enemy" ></div>
 							</div>
@@ -162,14 +162,15 @@
 			// Get the current weather details
 			var weather = data.list[0].weather[0].main;
 			// currentWeatherImage.src = "images/Clouds.jpg";
-			console.log(data.list);
+			console.log(data.list[0].weather[0].main);
 			if(weather === "Clear")
 				currentWeatherImage.style.backgroundImage = "url('images/Clear.jpg')";
 			else if(weather === "Snow")
 				currentWeatherImage.style.backgroundImage = "url('images/Snow.jpg')";
-			else if(weather === ("Thunderstorm" || "Drizzle" || "Rain"))
+			else if(weather === "Thunderstorm" || weather === "Drizzle" || weather === "Rain") {
 				currentWeatherImage.style.backgroundImage = "url('images/Thunderstorm.jpg')";
-			else if(weather === ("Clouds" || "Mist" || "Smoke" || "Haze" || "Dust" || "Fog" || "Sand" || "Ash" || "Squall" || "Tornado"))
+			}
+			else if(weather === "Clouds" || weather === "Mist" || weather === "Smoke" || weather === "Haze" || weather === "Dust" || weather === "Fog" || weather === "Sand" || weather ==="Ash" || weather === "Squall" || weather === "Tornado")
 				currentWeatherImage.style.backgroundImage = "url('images/Clouds.jpg')";
 			// currentWeatherImage.src = "images/" + weather + ".jpg";
 		}).catch(() => {
