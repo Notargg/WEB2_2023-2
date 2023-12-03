@@ -204,7 +204,7 @@ iframe {
   width: 50%;
   height: 100%;
   background: #ffffff;
-  overflow: hidden;
+  overflow: auto;
   display: flex;
   align-content: center;
   justify-content: center;
@@ -220,7 +220,10 @@ iframe {
   padding-left: 1rem;
 }
 
-
+.stats-Window{
+  height: 100%;
+  width: 100%;
+}
 
 .container-quickMenu {
   width: 100%;  
@@ -324,7 +327,9 @@ iframe {
   flex-direction: column;
   align-content: start;
   /*padding: 0 0.6rem 0.5rem;*/
-  overflow-y: auto;
+  overflow: auto;
+
+  /*overflow-y: auto;*/
 }
 
 .list-items li {
@@ -361,13 +366,14 @@ iframe {
 }
 
 .list-items::-webkit-scrollbar {
-  width: 1.6rem;
+  width: 1rem;
 }
 
 .list-items::-webkit-scrollbar-thumb {
   background: #2aa9f5;
   /*border-right: 0.6rem solid #e2e4e6;*/
 }
+
 
 
 .trelo1{
@@ -429,6 +435,11 @@ iframe {
   padding-left: 15px;
   padding-top: 5px;
 
+}
+
+.attackDamage{
+  padding-left: 15px;
+  padding-top: 5px;
 }
 
 .person{
