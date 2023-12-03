@@ -27,10 +27,10 @@
 		<div class="container-quickMenu">
 			<div class="wrap-quickMenu">
 				<ul>
-					<li><a href="/Trelo/index.html">Home</a></li>
-					<li><a href="/Battle/index.html">Batalha</a></li>
-					<li><a href="/Customizar/index.html">Customizar</a></li>
-					<li><a href="/Login/index.html">Sair</a></li>
+					<li><a href="/Trelo/index.html" class="Colorir">Home</a></li>
+					<li><a href="/Battle/index.html" class="Colorir">Batalha</a></li>
+					<li><a href="/Customizar/index.html" class="Colorir">Customizar</a></li>
+					<li><a href="/Login/index.html" class="Colorir">Sair</a></li>
 				</ul>
 
 			</div>
@@ -39,21 +39,108 @@
 			<div class="battle-field" id="currentWeatherImage">
 				<div class="battle-field__player">
 					<div class="battle-field__player__name">
-						<h1>Player 1</h1>
+						<h1 class="battle-field__player__name_nick">Notarg</h1>
 					</div>
 					<div class="battle-field__player__image">
-						<img src="images/PersTeste.png" alt="Player 1">
+						<img class="battle-field__enemy__image_all" src="images/512per.png" alt="Player 1">
 					</div>
 				</div>
 				<div class="battle-field__enemy">
 					<div class="battle-field__enemy__name">
-						<h1>Player 2</h1>
+						<h1 class="battle-field__player__name_nick">Portix</h1>
 					</div>
 					<div class="battle-field__enemy__image">
-						<img src="images/PersTeste.png" alt="Player 1">
+						<img class="battle-field__enemy__image_all" src="images/512per.png" alt="Player 1">
 					</div>
 				</div>
 			</div>
+		</div>
+		<div class="button-batlle">
+			<button class="button-batlle-b">
+				BATALHAR
+			</button>
+		</div>
+		<div class="container-stats100"> 
+			<div class="wrap-stats100">
+				<div class="stats-menu" data-tilt>
+					<ul class="stats-Window">
+						<div>
+							<a class="name-persono">Janela de Atributos: </a>
+							<a id="name" class="person">Nome: Notarg</a>
+							<a id="level" class="lv">Level: 1</a>
+							<a id="attackDamage" class="attackDamage">Attack Damage: 10</a>
+						</div>
+					
+						<li>
+							<a id="xp" class="xp">Experience: 0</a>
+							<a class="xp">/</a>
+							<a id="xpAmountToLevelUp" class="xp">100</a>
+							<div class="container-xp">
+								<div class="progress-xp" ></div>
+							</div>
+						</li>
+						<li >
+							<a id="hp">Hp: 100</a>
+							<a>/</a>
+							<a id="baseHp">100</a>
+							<div class="container-hp">
+								<div class="progress-hp" ></div>
+							</div>
+						</li>
+				
+						<li>
+							<a id="stamina">Stamina: 10</a>
+							<a>/</a>
+							<a id="baseStamina">10</a>
+							<div class="container-st">
+								<div class="progress-st" ></div>
+							</div>
+						</li>
+					</ul>
+					
+				</div>
+				<div class="stats-menu" data-tilt>
+					<ul class="stats-Window">
+						<div>
+							<a class="name-persono">Janela de Atributos: </a>
+							<a id="name" class="person">Nome: Portix</a>
+							<a id="level" class="lv">Level: 1</a>
+							<a id="attackDamage" class="attackDamage">Attack Damage: 12</a>
+						</div>
+					
+						<li>
+							<a id="xp" class="xp">Experience: 12</a>
+							<a class="xp">/</a>
+							<a id="xpAmountToLevelUp" class="xp">100</a>
+							<div class="container-xp-enemy">
+								<div class="progress-xp-enemy" ></div>
+							</div>
+						</li>
+						<li >
+							<a id="hp">Hp: 90</a>
+							<a>/</a>
+							<a id="baseHp">100</a>
+							<div class="container-hp-enemy">
+								<div class="progress-hp-enemy" ></div>
+							</div>
+						</li>
+				
+						<li>
+							<a id="stamina">Stamina: 6</a>
+							<a>/</a>
+							<a id="baseStamina">10</a>
+							<div class="container-st-enemy">
+								<div class="progress-st-enemy" ></div>
+							</div>
+						</li>
+					</ul>
+					
+				</div>
+				
+			</div>
+			<div class="fundo-falso">
+			</div>
+					
 		</div>
 	</div>
 </body>

@@ -57,9 +57,16 @@ a:focus {
 }
 
 a:hover {
-  text-decoration: none;
-  color: #f1f1f1;
+  text-decoration: none ;
+
 }
+
+.Colorir:hover{
+  text-decoration: none;
+  font-size: 1.1em;
+  color: rgb(124, 40, 202)
+}
+
 
 /*---------------------------------------------*/
 h1,h2,h3,h4,h5,h6 {
@@ -151,6 +158,36 @@ iframe {
 /*//////////////////////////////////////////////////////////////////
 [ login ]*/
 
+.button-batlle{
+  width: 100%;
+  height: 50px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 100px ;
+  background: -webkit-linear-gradient(-135deg, #c850c0, #4158d0);
+  background: -o-linear-gradient(-135deg, #c850c0, #4158d0);
+  background: -moz-linear-gradient(-135deg, #c850c0, #4158d0);
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
+}
+
+.button-batlle-b{
+  font-family: Montserrat-Bold;
+  font-size: 1rem;
+  color: #fff;
+  width: 100%;
+  height: 50px;
+  border-radius: 0.8rem;
+  background: #9053c7;
+  border: #111 solid 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
 .limiter {
   width: 100%;
   height: 100%;
@@ -162,6 +199,15 @@ iframe {
   background: linear-gradient(-135deg, #c850c0, #4158d0);
 }
 
+.fundo-falso{
+  width: 100%;
+  height: 1px;
+  background: #9053c7;
+  background: -webkit-linear-gradient(-135deg, #c850c0, #4158d0);
+  background: -o-linear-gradient(-135deg, #c850c0, #4158d0);
+  background: -moz-linear-gradient(-135deg, #c850c0, #4158d0);
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
+}
 
 
 .container-stats100 {
@@ -176,6 +222,12 @@ iframe {
   justify-content: center;
   align-items: start;
   padding: 5px 15px;
+  background: #9053c7;
+  background: -webkit-linear-gradient(-135deg, #c850c0, #4158d0);
+  background: -o-linear-gradient(-135deg, #c850c0, #4158d0);
+  background: -moz-linear-gradient(-135deg, #c850c0, #4158d0);
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
+  
 
 }
 /*Container that has half a white background and half purple*/
@@ -184,7 +236,6 @@ iframe {
   width: 100%;
   height: 100%;
   max-height: 100%;
-  background: #fff;
   border-radius: 10px;
   overflow: hidden;
 
@@ -201,9 +252,9 @@ iframe {
 /*A stats menu that'll be 50% of wrap-stats100, aligning everything in middle*/
 .stats-menu{
   border: #111 solid 2px;
+  background-color: #fff;
   width: 50%;
   height: 100%;
-  background: #ffffff;
   overflow: hidden;
   display: flex;
   align-content: center;
@@ -240,7 +291,7 @@ iframe {
   border: #111 solid 2px;
   width: 25rem;
   height: 3rem;
-  background: rgba(204, 195, 214, 0.333);
+  background: rgb(204, 195, 214);
   border-radius: 10px;
   overflow: hidden;
 
@@ -253,6 +304,7 @@ iframe {
   align-items: center;
   padding-left: 55px;
   justify-content: space-between;
+  color: rgb(132, 24, 182)111;
   /* padding: 1px; */
 }
 
@@ -261,7 +313,6 @@ iframe {
   list-style: none;
   display: inline-block;
   margin: 0 10px;
-  color: #111;
 }
 
 .title-trelo{
@@ -433,6 +484,7 @@ iframe {
   /*width: 960px;*/
   /*height: 540px;*/
   width: 90%;
+  border: #111 solid 5px;
   height: 80%;
   background: #f4f0f5;
   border-radius: 7px;
@@ -489,6 +541,20 @@ iframe {
   height: 100%;
 }
 
+.battle-field__player__name_nick{
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #5900ffcc;
+  background-color: #ffffff;
+  border: #111 solid 7px;
+  border-radius: 7px ;
+
+}
+
+
 /*Align div with the bottom of the screen*/
 .battle-field__enemy__image{
   width: 100%;
@@ -539,6 +605,11 @@ iframe {
 }
 
 .lv{
+  display: inline;
+  padding-left: 30px;
+}
+
+.attackDamage{
   display: inline;
   padding-left: 30px;
 }
@@ -645,6 +716,111 @@ iframe {
     width: 100%;
   }
 }
+
+
+/*------------------------------------------------------------------
+[ ProgressBar XP]*/
+
+.xp-enemy{
+  color: #5900ffcc;
+
+  width: 100%;
+  display: inline;
+  /*padding-bottom: 54px;*/
+
+
+}
+
+.container-xp-enemy{
+  height: 25px;
+  background-color: #999999;
+  position: relative;
+  border-radius: 7px  ;
+
+
+}
+
+.container-xp-enemy .progress-xp-enemy{
+  position:absolute;
+  height: 100%;
+  border-radius: 7px;
+  background-color: #9000ffcc;
+  animation: progress-animation-xp-enemy 2s ease-out forwards;
+
+}
+
+@keyframes progress-animation-xp-enemy {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 12%;
+  }
+}
+
+/*------------------------------------------------------------------
+[ Vida ]*/
+
+
+.container-hp-enemy{
+  height: 25px;
+  background-color: #999999;
+  position: relative;
+  border-radius: 7px  ;
+
+
+}
+
+.container-hp-enemy .progress-hp-enemy {
+  position:absolute;
+  height: 100%;
+  border-radius: 7px;
+  background-color: #9000ffcc;
+  animation: progress-animation-hp-enemy 2s ease-out forwards;
+
+}
+
+@keyframes progress-animation-hp-enemy {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+
+
+/*------------------------------------------------------------------
+[ Stamina ]*/
+
+
+.container-st-enemy{
+  height: 25px;
+  background-color: #999999;
+  position: relative;
+  border-radius: 7px  ;
+
+
+}
+
+.container-st-enemy .progress-st-enemy {
+  position:absolute;
+  height: 100%;
+  border-radius: 7px;
+  background-color: #9000ffcc;
+  animation: progress-animation-st-enemy 2s ease-out forwards;
+
+}
+
+@keyframes progress-animation-st-enemy {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 60%;
+  }
+}
+
 
 /*------------------------------------------------------------------
 [  ]*/
@@ -911,6 +1087,8 @@ iframe {
   visibility: visible;
   opacity: 1;
 }
+
+
 
 @media (max-width: 992px) {
   .alert-validate::before {

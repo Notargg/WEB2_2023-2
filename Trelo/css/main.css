@@ -56,9 +56,10 @@ a:focus {
 	outline: none !important;
 }
 
-a:hover {
-	text-decoration: none;
-  color: #f1f1f1;
+.Colorir:hover {
+  text-decoration: none;
+  font-size: 1.1em;
+  color: rgb(124, 40, 202)
 }
 
 trel
@@ -247,7 +248,7 @@ iframe {
   border: #111 solid 2px;
   width: 25rem;
   height: 3rem;
-  background: rgba(204, 195, 214, 0.333);
+  background: rgb(204, 195, 214);
   border-radius: 10px;
   overflow: hidden;
 
@@ -270,6 +271,13 @@ iframe {
   margin: 0 10px;
   color: #111;
 }
+
+
+a:hover {
+  text-decoration: none ;
+
+}
+
 
 .title-trelo{
   font-family: Poppins-Bold;
