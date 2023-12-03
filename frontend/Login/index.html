@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Login V1</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="./js/main.js" defer></script>
+</head>
+<body>
+	
+	<div class="limiter">
+		<div class="container-login">
+			<div class="wrap-login">
+				<div class="login-logo js-tilt" data-tilt>
+					<img src="images/img-01.png" alt="IMG">
+				</div>
+
+				<form class="login-form" id="login-form">
+					<span class="login-form-header">
+						Login
+					</span>
+
+					<div class="wrap-input validate-input" data-validate = "Insira um email válido: exemplo@abc.com">
+						<h3 class="input-header"> Email </h3>
+						<input class="input" type="text" name="email">
+					</div>
+
+					<div class="wrap-input validate-input" data-validate = "Senha obrigatória">
+						<h3 class="input-header"> Senha </h3>
+						<input class="input" type="password" name="senha">
+					</div>
+					
+					<div class="container-login-btn">
+						<button class="login-form-btn" type="submit">
+							LOGIN
+						</button>
+					</div>
+
+					<div class="container-cadastrese">
+						<a class="cadastro-btn" href="/WEB2_2023-2/Cadastro">
+							Cadastre-se
+							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+						</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
