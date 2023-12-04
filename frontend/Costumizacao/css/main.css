@@ -144,8 +144,6 @@ html, body {
     margin: 1rem;
 }
 
-
-
 @media (max-width: 1500px) {
     .costumizacao-wrap {
         width: 90%;
@@ -158,11 +156,11 @@ html, body {
         flex-direction: column;
         height: 80vh;
     }
-    
+
     .personagem-container
     {
         height: 100%;
     }
 }
-    
+
 }
