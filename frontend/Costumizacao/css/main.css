@@ -54,6 +54,7 @@ html, body {
     height: 3rem;
     background: rgb(204, 195, 214);
     border-radius: 10px;
+    border: #111 solid 2px;
     overflow: hidden;
   
     display: -webkit-box;
@@ -84,6 +85,10 @@ html, body {
 	line-height: 1.7;
 	color: #666666;
 	margin: 0px;
+    transition: all 0.4s;
+	-webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
 
 }
 
@@ -93,10 +98,6 @@ ul, li {
     
 }
 
-  a:hover {
-    text-decoration: none ;
-  
-  }
   
   a:focus {
 	outline: none !important;
@@ -133,7 +134,8 @@ ul, li {
     width: 60%;
     height: 60vh;
     background-color: white;
-    border-radius: 1rem;
+    border-radius: 7px;
+    border: #111 solid 7px;
 }
 
 .planoDeFundo {
