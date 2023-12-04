@@ -64,7 +64,7 @@ html, body {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    padding-left: 55px;
+    padding-left: 40px;
     justify-content: space-between;
     /* padding: 1px; */
   }
@@ -162,6 +162,7 @@ ul, li {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 }
 
 .opcao {
@@ -208,8 +209,21 @@ ul, li {
         height: 80vh;
     }
 
-    .opcao span {
-        font-size: 1rem;
+    .personagem-container
+    {
+        height: 100%;
+        width: 100%;
     }
 
+    .opcao span{
+        font-size: 1rem;
+        margin: 0%;
+    }
+
+    .botao-salvar{
+        font-size: 0.7rem
+
+    }
 }
+
+
