@@ -303,6 +303,7 @@ a:hover {
   justify-content: center;
   align-items: start;
   padding: 5px 5px;
+  
 }
 
 .wrap-treloGrid {
@@ -775,19 +776,52 @@ a:hover {
 
 
 
-@media (max-width: 992px) {
-  .wrap-login100 {
-    /* padding: 177px 90px 33px 85px; */
-  }
+@media (max-width: 920px) {
+    /*.wrap-login {*/
+    /*  padding: 177px 90px 33px 85px;*/
+    /*}*/
+    .container-stats100{
+      height: 70%;
+    }
+  
+    .wrap-stats100{
+      width: 100%;
+      height: 100%;
+      flex-wrap: nowrap;
+      align-content: start;
+      overflow-y: auto;
+      flex-direction: column;
+    }
+    
+    .stats-menu{
+      width: 100%;
+      height: 100%;
+    }
+    
+    .login100-form {
+      width: 100%;
+      height: 100%;
+    }
+    
+    .container-trelo{
+        height: 100%;
+        background: #c850c0;
+        background: -webkit-linear-gradient(-135deg, #9053c7, #4158d0);
+        background: -o-linear-gradient(-135deg, #9053c7, #4158d0);
+        background: -moz-linear-gradient(-135deg, #9053c7, #4158d0);
+        background: linear-gradient(-135deg, #9053c7, #4158d0);
+    }
+    
+    .list-items{
+      height: 100%;
+    }
+    .wrap-treloGrid {
+      height: 100%;
+      grid-template-columns: 50% 50%;
+      grid-template-rows: 50% 50%;
+    }
 
-  .login100-pic {
-    width: 50%;
   }
-
-  .login100-form {
-    width: 50%;
-  }
-}
 
 @media (max-width: 768px) {
   .wrap-login100 {
@@ -800,7 +834,6 @@ a:hover {
   }
 
   .login100-form {
-    width: 50%;
   }
 }
 

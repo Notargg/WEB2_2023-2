@@ -144,14 +144,25 @@ html, body {
     margin: 1rem;
 }
 
-@media (max-width: 1400px) {
-    .costumizacao-wrap {
-        width: 100%;
-    }
-}
+
 
 @media (max-width: 1500px) {
     .costumizacao-wrap {
         width: 90%;
+    }  
+
+@media (max-width: 720px) {
+    .costumizacao-wrap {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 80vh;
     }
+    
+    .personagem-container
+    {
+        height: 100%;
+    }
+}
+    
 }
