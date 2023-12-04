@@ -20,11 +20,7 @@
   src: url('../fonts/montserrat/Montserrat-Bold.ttf'); 
 }
 
-html, body {
-  margin: 0;
-  padding: 0;
-}
-
+/*---------------------------------------------*/
 input {
 	outline: none;
 	border: none;
@@ -124,7 +120,6 @@ input:focus {
   font-size: 1.1rem;
   margin-bottom: 0.3rem;
   font-family: Poppins-Regular;
-  font-weight: 500;
 }
 
 .container-login-btn {

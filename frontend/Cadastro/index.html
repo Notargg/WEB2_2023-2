@@ -1,58 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Cadastro</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-	<!--<link rel="stylesheet" type="text/css" href="css/util.css">-->
+	<title>Cadastro</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
 </head>
 <body>
-    
-    <div class="limiter">
-        <div class="container-cadastro">
-            <div class="wrap-cadastro">
-                <div class="cadastro-logo js-tilt" data-tilt>
-                    <img src="images/img-01.png" alt="IMG">
-                </div>
+	
+	<div class="limiter">
+		<div class="container-cadastro">
+			<div class="wrap-cadastro">
+				<div class="cadastro-logo js-tilt" data-tilt>
+					<img src="images/img-01.png" alt="IMG">
+				</div>
 
-                <form class="cadastro-form" id="cadastro-form">
-                    <span class="cadastro-form-header">
-                        Cadastre-se
-                    </span>
+				<form class="cadastro-form validate-form">
+					<span class="cadastro-form-header">
+						Cadastre-se
+					</span>
                     <p class="cadastro-text"> Faça seu cadastro e mergulhe na experiência de 
                         aprendizado gamificada!</p>
 
-                    <div class="wrap-input validate-input">
-                        <h3 class="input-header"> Username </h3>
-                        <input class="input" type="text" name="username">
-                    </div>
+                    <div class="wrap-input validate-input" data-validate = "Insira um email válido: exemplo@abc.com">
+						<h3 class="input-header"> Username </h3>
+						<input class="input" type="text" name="username">
+					</div>
 
-                    <div class="wrap-input validate-input">
-                        <h3 class="input-header"> Email </h3>
-                        <input class="input" type="text" name="email">
-                    </div>
+					<div class="wrap-input validate-input" data-validate = "Insira um email válido: exemplo@abc.com">
+						<h3 class="input-header"> Email </h3>
+						<input class="input" type="text" name="email">
+					</div>
 
-                    <div class="wrap-input validate-input">
-                        <h3 class="input-header"> Senha </h3>
-                        <input class="input" type="password" name="senha">
-                    </div>
-                    
-                    <div class="wrap-input validate-input">
-                        <h3 class="input-header"> Confirmar senha </h3>
-                        <input class="input" type="password" name="confirmeSenha">
-                    </div>
+					<div class="wrap-input validate-input" data-validate = "Senha obrigatória">
+						<h3 class="input-header"> Senha </h3>
+						<input class="input" type="password" name="pass">
+					</div>
+					
+                    <div class="wrap-input validate-input" data-validate = "Senha obrigatória">
+						<h3 class="input-header"> Confirmar senha </h3>
+						<input class="input" type="password" name="pass">
+					</div>
 
-                    <div class="container-cadastro-btn">
-                        <button class="cadastro-form-btn" type="submit">
-                            CADASTRAR
-                        </button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
+					<div class="container-cadastro-btn">
+						<button class="cadastro-form-btn">
+							CADASTRAR
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
 
-    <script src="./js/main.js" defer></script>
 </body>
 </html>

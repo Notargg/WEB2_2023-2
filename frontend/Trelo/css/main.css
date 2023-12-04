@@ -56,10 +56,13 @@ a:focus {
 	outline: none !important;
 }
 
-a:hover {
-	text-decoration: none;
-  color: #57b846;
+.Colorir:hover {
+  text-decoration: none;
+  font-size: 1.1em;
+  color: rgb(124, 40, 202)
 }
+
+trel
 
 /*---------------------------------------------*/
 h1,h2,h3,h4,h5,h6 {
@@ -180,6 +183,7 @@ iframe {
 }
 /*Container that has half a white background and half purple*/
 .wrap-stats100 {
+  border: #111 solid 2px;
   width: 100%;
   height: 100%;
   max-height: 100%;
@@ -199,22 +203,32 @@ iframe {
 
 /*A stats menu that'll be 50% of wrap-stats100, aligning everything in middle*/
 .stats-menu{
+  border: #111 solid 2px;
   width: 50%;
   height: 100%;
   background: #ffffff;
-  border-radius: 10px;
-  overflow: hidden;
+  overflow: auto;
   display: flex;
   align-content: center;
-}
-
-.stats-menu a{
+  justify-content: center;
+  padding: 10px 10px;
   
 }
 
-.stats-menu img {
+.stats-menu img{
+  border: #111 solid 2px;
+
 }
 
+.stats-menu li{
+  padding-left: 1rem;
+}
+
+.stats-Window{
+  height: 100%;
+  width: 100%;
+
+}
 
 .container-quickMenu {
   width: 100%;  
@@ -231,9 +245,10 @@ iframe {
 
 
 .wrap-quickMenu {
+  border: #111 solid 2px;
   width: 25rem;
   height: 3rem;
-  background: rgba(204, 195, 214, 0.333);
+  background: rgb(204, 195, 214);
   border-radius: 10px;
   overflow: hidden;
 
@@ -250,6 +265,7 @@ iframe {
 }
 
 .wrap-quickMenu ul li{
+  
   list-style: none;
   display: inline-block;
   margin: 0 10px;
@@ -257,6 +273,23 @@ iframe {
 }
 
 
+a:hover {
+  text-decoration: none ;
+
+}
+
+
+.title-trelo{
+  font-family: Poppins-Bold;
+  font-size: 1.2rem;
+  color: #333333;
+  line-height: 1.2;
+  text-align: center;
+
+  width: 100%;
+  display: block;
+  /*padding-bottom: 54px;*/
+}
 
 .container-trelo {
   width: 100%;  
@@ -292,6 +325,7 @@ iframe {
 .wrap-treloGrid > div
 {
   border-radius: 10px;
+   overflow: hidden;
   align-items: center;
   text-align: left;
   padding: 5px 10px;
@@ -299,13 +333,15 @@ iframe {
 
 .list-items {
   flex: 1;
-  /*display: flex;*/
+  display: flex;
   height: 100%;
-  background: #0c5460;
+  background: rgba(12, 84, 96, 0);
   flex-direction: column;
   align-content: start;
   /*padding: 0 0.6rem 0.5rem;*/
-  overflow-y: auto;
+  overflow: auto;
+
+  /*overflow-y: auto;*/
 }
 
 .list-items li {
@@ -320,27 +356,61 @@ iframe {
   margin-bottom: 0.6rem;
   word-wrap: break-word;
   cursor: pointer;
+  text-align: center;
 }
+
+.list-items li:last-of-type {
+  margin-bottom: 0;
+}
+
+.list-items li:hover {
+  background-color: #eee;
+}
+
+/* Track */
+.list-items::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle on hover */
+.list-items::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.list-items::-webkit-scrollbar {
+  width: 1rem;
+}
+
+.list-items::-webkit-scrollbar-thumb {
+  background: #2aa9f5;
+  /*border-right: 0.6rem solid #e2e4e6;*/
+}
+
+
 
 .trelo1{
   background:#fff;
+  border: #111 solid 2px;
   margin-right: 10px;
 
 }
 
 .trelo2{
-  background:#fff;
+  background-color: #8f51ebec;
+  border: #111 solid 2px;
   margin-right: 10px;
 }
 
 .trelo3{
   background:#fff;
+  border: #111 solid 2px;
   margin-right: 10px;
 
 }
 
 .trelo4{
-  background:#fff;
+  background-color: #8f51ebec;
+  border: #111 solid 2px;
   margin-right: 10px;
 }
 
@@ -359,6 +429,151 @@ iframe {
 .trelo4-grid{
   height: 100%;
 }
+
+
+/*------------------------------------------------------------------
+[Personagem ]*/
+
+
+.name-persono{
+  font-family: Poppins-Bold;
+  font-size: 1.2rem;
+  color: #5900ffcc;
+  line-height: 1.2;
+
+  width: 100%;
+  display: block;
+  /*padding-bottom: 54px;*/
+  padding-left: 15px;
+  padding-top: 5px;
+
+}
+
+.attackDamage{
+  padding-left: 15px;
+  padding-top: 5px;
+}
+
+.person{
+  width: 90%;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  align-items: center;
+  text-align: left;
+  padding-left: 15px;
+
+
+}
+
+.lv{
+  display: inline;
+  padding-left: 30px;
+}
+
+/*------------------------------------------------------------------
+[ ProgressBar XP]*/
+
+.xp{
+  color: #5900ffcc;
+
+  width: 100%;
+  display: inline;
+  /*padding-bottom: 54px;*/
+
+
+}
+
+.container-xp{
+  height: 25px;
+  background-color: #999999;
+  position: relative;
+  border-radius: 7px  ;
+
+
+}
+
+.container-xp .progress-xp {
+  position:absolute;
+  height: 100%;
+  border-radius: 7px;
+  background-color: #9000ffcc;
+  animation: progress-animation-xp 2s ease-out forwards;
+
+}
+
+@keyframes progress-animation-xp {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 2%;
+  }
+}
+
+/*------------------------------------------------------------------
+[ Vida ]*/
+
+
+.container-hp{
+  height: 25px;
+  background-color: #999999;
+  position: relative;
+  border-radius: 7px  ;
+
+
+}
+
+.container-hp .progress-hp {
+  position:absolute;
+  height: 100%;
+  border-radius: 7px;
+  background-color: #9000ffcc;
+  animation: progress-animation-hp 2s ease-out forwards;
+
+}
+
+@keyframes progress-animation-hp {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+
+/*------------------------------------------------------------------
+[ Stamina ]*/
+
+
+.container-st{
+  height: 25px;
+  background-color: #999999;
+  position: relative;
+  border-radius: 7px  ;
+
+
+}
+
+.container-st .progress-st {
+  position:absolute;
+  height: 100%;
+  border-radius: 7px;
+  background-color: #9000ffcc;
+  animation: progress-animation-st 2s ease-out forwards;
+
+}
+
+@keyframes progress-animation-st {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
 /*------------------------------------------------------------------
 [  ]*/
 .login100-pic {
@@ -367,24 +582,15 @@ iframe {
 }
 
 
-.stats-menu{
-  width: 50%;
-  height: 100%;
-  background: #ffffff;
-  border-radius: 10px;
-  border-color: #111;
-  border: #111;
-  overflow: hidden;
-  display: flex;
-  align-content: center;
-  padding: 10px 10px;
-}
+
 
 /*------------------------------------------------------------------
 [  ]*/
 .login100-form {
+  border: #111 solid 2px;
   width: 50%;
-  background-color: #8636ff;
+  background-color: #8f51ebec;
+  padding: 0px 10px 0px 10px;
 }
 
 .login100-form-title {
@@ -396,7 +602,7 @@ iframe {
 
   width: 100%;
   display: block;
-  padding-bottom: 54px;
+  /*padding-bottom: 54px;*/
 }
 
 
@@ -422,6 +628,19 @@ iframe {
   padding: 0 30px 0 30px;
 }
 
+.input100r {
+  font-family: Poppins-Medium;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #666666;
+
+  display: block;
+  width: 100%;
+  background: #e6e6e6;
+  height: 40px;
+  border-radius: 15px;
+  padding: 0 30px 0 30px;
+}
 
 /*------------------------------------------------------------------
 [ Focus ]*/
@@ -432,13 +651,31 @@ iframe {
   bottom: 0;
   left: 0;
   z-index: -1;
-  width: 80%;
+  width: 100%;
   height: 100%;
   box-shadow: 0px 0px 0px 0px;
-  color: rgba(255, 0, 0, 0.8);
+  color: rgba(89, 0, 255, 0.8);
 }
 
-.input100:focus + .focus-input100 {
+.focus-input100r {
+  display: block;
+  position: absolute;
+  border-radius: 15px;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0px 0px 0px 0px;
+  color: rgba(254, 253, 255, 0.8);
+}
+
+.input100:focus + .focus-input100  {
+  -webkit-animation: anim-shadow 0.5s ease-in-out forwards;
+  animation: anim-shadow 0.5s ease-in-out forwards;
+}
+
+.input100r:focus + .focus-input100r  {
   -webkit-animation: anim-shadow 0.5s ease-in-out forwards;
   animation: anim-shadow 0.5s ease-in-out forwards;
 }
