@@ -195,6 +195,10 @@ ul, li {
     .costumizacao-wrap {
         width: 90%;
     }  
+    .opcao span {
+        font-size: 1rem;
+    }
+}
 
 @media (max-width: 720px) {
     .costumizacao-wrap {
@@ -204,12 +208,8 @@ ul, li {
         height: 80vh;
     }
 
-    .personagem-container
-    {
-        height: 100%;
+    .opcao span {
+        font-size: 1rem;
     }
-}
-
-
 
 }
