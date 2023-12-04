@@ -8,61 +8,64 @@
 </head>
 <body>
 
-<div class="costumizacao-container">
+<div class="limiter">
     <div class="container-quickMenu">
         <div class="wrap-quickMenu">
             <ul>
-                <li><a href="/Trelo/index.html">Home</a></li>
-                <li><a href="/Batalha/index.html">Batalha</a></li>
-                <li><a href="">Estatísticas</a></li>
-                <li><a href="*">Sair</a></li>
+                <li><a href="/frontend/Trelo/index.html" class="Colorir">Home</a></li>
+                <li><a href="/frontend/Battle/index.html" class="Colorir">Batalha</a></li>
+                <li><a href="/frontend/Costumizacao/index.html" class="Colorir">Customizar</a></li>
+                <li><a href="/frontend/Login/index.html" class="Colorir">Sair</a></li>
             </ul>
 
         </div>
     </div>
-    <div class="costumizacao-wrap">
-        <div class="personagem-container">
-            <div class="personagem">
-                <img src="../Personagem/Tela Batalha.jpg" class="planoDeFundo" id="planoDeFundo-image" alt="Personagem">
-                <img src="../Personagem/Cabelo/cabeloLoiro.png" class="cabelo" id="cabelo-image" alt="Personagem">
-                <img src="../Personagem/Olho/olho.png" class="cabelo" id="olho-image" alt="Personagem">
-                <img src="../Personagem/Pele/peleClara.png" class="pele" id="pele-image" alt="Personagem">
-            </div>
-        </div>
-        <div class="opcoes-container">
-            <div class="opcao">
-                <i class="fa-solid fa-caret-right fa-rotate-180" onClick="changeCharacter('cabelo', 'next')" style="color:#7A6C9D; font-size: 2.5rem;"></i>
-                <span>Estilo do cabelo</span>
-                <i class="fa-solid fa-caret-right" onClick="changeCharacter('cabelo', 'prev')" style="color:#7A6C9D; font-size: 2.5rem;"></i>
-            </div>
 
-            <div class="opcao">
-                <i class="fa-solid fa-caret-right fa-rotate-180" onClick="changeCharacter('pele', 'next')" style="color:#7A6C9D; font-size: 2.5rem;"></i>
-                <span>Cor da pele</span>
-                <i class="fa-solid fa-caret-right" onClick="changeCharacter('pele', 'prev')" style="color:#7A6C9D; font-size: 2.5rem;"></i>
+    <div class="costumizacao-container">
+        <div class="costumizacao-wrap">
+            <div class="personagem-container">
+                <div class="personagem">
+                    <img src="../Personagem/Tela Batalha.jpg" class="planoDeFundo" id="planoDeFundo-image" alt="Personagem">
+                    <img src="../Personagem/Cabelo/cabeloLoiro.png" class="cabelo" id="cabelo-image" alt="Personagem">
+                    <img src="../Personagem/Olho/olho.png" class="cabelo" id="olho-image" alt="Personagem">
+                    <img src="../Personagem/Pele/peleClara.png" class="pele" id="pele-image" alt="Personagem">
+                </div>
             </div>
+            <div class="opcoes-container">
+                <div class="opcao">
+                    <i class="fa-solid fa-caret-right fa-rotate-180" onClick="changeCharacter('cabelo', 'next')" style="color:#7A6C9D; font-size: 2.5rem;"></i>
+                    <span>Estilo do cabelo</span>
+                    <i class="fa-solid fa-caret-right" onClick="changeCharacter('cabelo', 'prev')" style="color:#7A6C9D; font-size: 2.5rem;"></i>
+                </div>
 
-            <div class="opcao">
-                <i class="fa-solid fa-caret-right fa-rotate-180" onClick="changeCharacter('olho', 'next')" style="color:#7A6C9D; font-size: 2.5rem;"></i>
-                <span>Cor do olho</span>
-                <i class="fa-solid fa-caret-right" onClick="changeCharacter('olho', 'prev')" style="color:#7A6C9D; font-size: 2.5rem;"></i>
+                <div class="opcao">
+                    <i class="fa-solid fa-caret-right fa-rotate-180" onClick="changeCharacter('pele', 'next')" style="color:#7A6C9D; font-size: 2.5rem;"></i>
+                    <span>Cor da pele</span>
+                    <i class="fa-solid fa-caret-right" onClick="changeCharacter('pele', 'prev')" style="color:#7A6C9D; font-size: 2.5rem;"></i>
+                </div>
+
+                <div class="opcao">
+                    <i class="fa-solid fa-caret-right fa-rotate-180" onClick="changeCharacter('olho', 'next')" style="color:#7A6C9D; font-size: 2.5rem;"></i>
+                    <span>Cor do olho</span>
+                    <i class="fa-solid fa-caret-right" onClick="changeCharacter('olho', 'prev')" style="color:#7A6C9D; font-size: 2.5rem;"></i>
+                </div>
+
+                <div class="opcao">
+                    <i class="fa-solid fa-caret-right fa-rotate-180" onClick="changeCharacter('roupa', 'next')" style="color:#7A6C9D; font-size: 2.5rem;"></i>
+                    <span>Cor da roupa</span>
+                    <i class="fa-solid fa-caret-right" onClick="changeCharacter('roupa', 'prev')" style="color:#7A6C9D; font-size: 2.5rem;"></i>
+                </div>
+
+                <div class="opcao">
+                    <i class="fa-solid fa-caret-right fa-rotate-180" onClick="changeCharacter('planoDeFundo', 'next')" style="color:#7A6C9D; font-size: 2.5rem;"></i>
+                    <span>Plano de Fundo</span>
+                    <i class="fa-solid fa-caret-right" onClick="changeCharacter('planoDeFundo', 'prev')" style="color:#7A6C9D; font-size: 2.5rem;"></i>
+                </div>
+
+                <button onclick="salvaPersonagem()" class="botao-salvar" >SALVAR</button>
             </div>
-
-            <div class="opcao">
-                <i class="fa-solid fa-caret-right fa-rotate-180" onClick="changeCharacter('roupa', 'next')" style="color:#7A6C9D; font-size: 2.5rem;"></i>
-                <span>Cor da roupa</span>
-                <i class="fa-solid fa-caret-right" onClick="changeCharacter('roupa', 'prev')" style="color:#7A6C9D; font-size: 2.5rem;"></i>
-            </div>
-
-            <div class="opcao">
-                <i class="fa-solid fa-caret-right fa-rotate-180" onClick="changeCharacter('planoDeFundo', 'next')" style="color:#7A6C9D; font-size: 2.5rem;"></i>
-                <span>Plano de Fundo</span>
-                <i class="fa-solid fa-caret-right" onClick="changeCharacter('planoDeFundo', 'prev')" style="color:#7A6C9D; font-size: 2.5rem;"></i>
-            </div>
-
-            <button onclick="salvaPersonagem()" class="botao-salvar" >SALVAR</button>
-        </div>
-    </div>    
+        </div>    
+    </div>
 </div>
 
 <script src="./js/main.js"></script>
