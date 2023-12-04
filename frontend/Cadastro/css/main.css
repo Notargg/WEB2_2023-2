@@ -124,7 +124,7 @@
     color: #666666;
     border: 1px solid #d3d3d3;
   
-    width: 100%;
+    width: 90%;
     display: block;
     background: #f4f0f5;
     height: 50px;
@@ -150,7 +150,7 @@
     padding-top: 20px;
   }
   
-  .login-form-btn {
+  .cadastro-form-btn {
     font-family: Montserrat-Bold;
     font-size: 1rem;
     color: #fff;
@@ -211,6 +211,7 @@
     .login-form {
       width: 100%;
     }
+    
   }
   
 
