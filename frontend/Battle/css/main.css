@@ -302,7 +302,7 @@ iframe {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  padding-left: 55px;
+  padding-left: 40px;
   justify-content: space-between;
   color: rgb(132, 24, 182);
   /* padding: 1px; */
