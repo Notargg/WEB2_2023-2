@@ -162,6 +162,7 @@ ul, li {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 }
 
 .opcao {
@@ -207,6 +208,11 @@ ul, li {
     .personagem-container
     {
         height: 100%;
+    }
+
+    .opcao span{
+        font-size: 1rem;
+        margin: 0%;
     }
 }
 
